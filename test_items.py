@@ -12,7 +12,7 @@ links = [
 def test_find_add_to_basket_button(browser, link):
     browser.get(link)
     curr_language = browser.execute_script('return window.navigator.language || window.navigator.userLanguage')
-    tim.sleep(3)
+    time.sleep(3)
     if 'fr' in curr_language:
         time.sleep(30)
     find_buttons = browser.find_elements(By.CSS_SELECTOR, '#add_to_basket_form .btn-add-to-basket')
